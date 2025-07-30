@@ -1,27 +1,43 @@
-<<<<<<< HEAD
-# devops-assignment
-=======
-# DevOps Take-Home Assignment
+# DevOps Assignment – Mohammad AbuKhalaf
 
-This project demonstrates how to deploy an ASP.NET Core Web API to AWS using Infrastructure as Code (CDK), containerization (Docker), and CI/CD (GitHub Actions).
+This project demonstrates deploying a minimal ASP.NET Core Web API application to AWS using Docker, AWS CDK (TypeScript), ECS Fargate, and GitHub Actions for CI/CD.
 
 ---
 
-## 📦 Project Structure
+## 🚀 How to Run the App Locally
 
-- `src/DevOpsApp/` — Minimal ASP.NET Core Web API project
-- `lib/` — AWS CDK infrastructure (VPC, ECS Fargate, ALB, Logs)
-- `.github/workflows/` — CI/CD pipeline using GitHub Actions
-- `Dockerfile` — Container image for the .NET application
+1. Make sure you have the .NET SDK installed (version 8.0):
 
----
+   ```bash
+   dotnet --version
 
-## 🚀 How to Run Locally
+Navigate to the app directory:
 
-Make sure you have .NET SDK 8.0 installed:
+   cd src/DevOpsApp
 
-```bash
-cd src/DevOpsApp
-dotnet restore
-dotnet run
->>>>>>> 21b95ce (Initial commit - test)
+Restore dependencies and run the app:
+
+   dotnet restore
+   dotnet run
+
+The API will be available at:
+
+    http://localhost:5000
+
+☁️ How to Deploy the Infrastructure (Using AWS CDK)
+Install Node.js dependencies:
+
+     npm install
+
+Build the CDK project:
+
+     npm run build
+
+(Only the first time) Bootstrap your AWS CDK environment:
+
+     cdk bootstrap
+
+Deploy the infrastructure:
+
+    cdk deploy
+```
